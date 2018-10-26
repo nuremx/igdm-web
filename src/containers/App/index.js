@@ -74,26 +74,21 @@ class App extends Component {
                 Continue your Instagram direct messages from your phone to your desktop.
               </h3>
               <div className="download col-md-auto mt-5">
-                <h5>Login using your Instagram Credentials</h5>
+                <h5>Start now using your Instagram Credentials</h5>
                 <div className="mt-2 btn-group" role="group" aria-label="Download buttons">
                   <a
                     className="btn btn-outline-light"
                     role="button"
-                    href="https://github.com/ifedapoolarewaju/igdm/releases/download/v2.5.4/IGdm-Setup-2.5.4.exe"
+                    href="http://localhost:8080/login"
                   >
-                    <i className="mdi mdi-windows" />
-                    <span className="ml-2">Signup</span>
+                    <i className="mdi mdi-instagram" />
+                    <span className="ml-2">Login</span>
                   </a>
                 </div>
               </div>
-              <a
-                className="downloadCount mt-3 d-block"
-                href="https://twitter.com/teddyskillz2/status/910252532026548224"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Over 4000+ Downloads!
-              </a>
+              <p className="downloadCount mt-3 d-block" target="_blank" rel="noopener noreferrer">
+                It is completely free!
+              </p>
             </div>
           </div>
           <div className="container">
