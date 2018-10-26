@@ -5,24 +5,24 @@ module.exports = {
     'comment-empty-line-before': [
       'always',
       {
-        ignore: ['stylelint-commands', 'after-comment']
-      }
+        ignore: ['stylelint-commands', 'after-comment'],
+      },
     ],
     'declaration-colon-space-after': 'always',
     indentation: [
       'tab',
       {
-        except: ['value']
-      }
+        except: ['value'],
+      },
     ],
     'max-empty-lines': 2,
     'rule-empty-line-before': [
       'always',
       {
         except: ['first-nested'],
-        ignore: ['after-comment']
-      }
+        ignore: ['after-comment'],
+      },
     ],
-    'unit-whitelist': ['em', 'rem', '%', 's', 'px', 'ms']
-  }
+    'unit-whitelist': ['em', 'rem', '%', 's', 'px', 'ms', 'deg'],
+  },
 }

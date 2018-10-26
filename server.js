@@ -25,6 +25,8 @@ app.use(hpp())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.use('/static', express.static(path.resolve('static')))
+
 if (!isProduction && !SERVER_ONLY) app.use(require(path.resolve('config/webpackDevServer')))
 if (isProduction && !SERVER_ONLY) {
   app.use(express.static(path.resolve('dist')))
