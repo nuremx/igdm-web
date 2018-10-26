@@ -1,0 +1,69 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.8.2",
+  "description": "React, Redux, code-splitting, hot-reload, Scss, Stage 2, ESLint, Express, ES2016",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2-dev ./config/ecosystem.config.js",
+    "start:nodemon": "NODE_ENV=development nodemon --ignore 'src/**' -e \"graphql js\"",
+    "start:prod": "pm2 start server.js",
+    "build:prod": "webpack --config ./config/webpack.prod.js",
+    "start:docker": "pm2-docker start ./config/ecosystem.docker.config.js",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "stats": "webpack-cli --config ./config/webpack.prod.js --json > stats.json"
+  },
+  "author": "nure,",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": "precommit",
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "helmet": "^3.14.0",
+    "hpp": "^0.2.2",
+    "react": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.7.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "react-dom": "^16.5.2",
+    "react-hot-loader": "^4.3.11",
+    "react-router-dom": "^4.3.1",
+    "resolve-url-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-merge": "^4.1.4",
+    "webpack-pwa-manifest": "^3.7.1",
+    "workbox-webpack-plugin": "^3.6.2"
+  }
+}
